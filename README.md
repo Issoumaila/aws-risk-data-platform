@@ -1,13 +1,24 @@
 # aws-risk-data-platform
-AWS data lake for financial risk analytics (Bronze/Silver/Gold)
-git clone https://github.com/Issoumaila/aws-risk-data-platform.git
-cd aws-risk-data-platform
-mkdir -p terraform diagrams
-touch terraform/{main.tf,variables.tf,versions.tf,outputs.tf,README.md}
-touch .gitignore
-.terraform/
-*.tfstate
-*.tfstate.*
-git add .
-git commit -m "init: project structure for aws risk data platform"
-git push
+
+AWS data lake for financial risk analytics using a Medallion Architecture  
+(Bronze / Silver / Gold)
+
+## 🏗️ Architecture
+- Data sources → S3 Bronze (raw)
+- AWS Glue (ETL & Crawlers)
+- S3 Silver (cleaned, standardized)
+- S3 Gold (analytics-ready)
+- Athena / Redshift for querying & BI
+
+## 📁 Repository structure
+```text
+aws-risk-data-platform/
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── versions.tf
+│   ├── outputs.tf
+│   └── README.md
+├── diagrams/
+│   └── architecture.drawio
+└── README.md
