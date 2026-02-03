@@ -8,3 +8,6 @@ touch .gitignore
 .terraform/
 *.tfstate
 *.tfstate.*
+git add .
+git commit -m "init: project structure for aws risk data platform"
+git push
