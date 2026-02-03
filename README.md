@@ -5,3 +5,6 @@ cd aws-risk-data-platform
 mkdir -p terraform diagrams
 touch terraform/{main.tf,variables.tf,versions.tf,outputs.tf,README.md}
 touch .gitignore
+.terraform/
+*.tfstate
+*.tfstate.*
